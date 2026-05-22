@@ -33,7 +33,9 @@ Yazılım Test Mühendisliği dersi proje ödevi. Spring Boot tabanlı e-ticaret
 
 ### Doğrulama Kuralları
 
+- Ürün adı boş olamaz
 - Fiyat 0'dan büyük olmalı
+- Stok negatif olamaz
 - Aynı isimde ürün eklenemez (409 Conflict)
 
 ## Proje Yapısı
