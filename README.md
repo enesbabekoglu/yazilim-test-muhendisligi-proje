@@ -39,9 +39,11 @@ Yazılım Test Mühendisliği dersi proje ödevi. Spring Boot tabanlı e-ticaret
 ## Proje Yapısı
 
 ```
-ecommerce-api-regression-tests
+yazilim-test-muhendisligi-proje
 ├── pom.xml
-├── Proje Ödevi.postman_collection.json
+├── postman-collection.json
+├── .gitignore
+├── README.md
 ├── src
 │   ├── main/java/com/example/ecommerce
 │   │   ├── EcommerceApplication.java
@@ -49,11 +51,6 @@ ecommerce-api-regression-tests
 │   │   └── ProductController.java
 │   └── test/java/com/example/ecommerce
 │       └── ProductApiRegressionTest.java
-├── presentation/
-│   ├── sunum.md
-│   └── sunum-rehberi.md
-├── proje-odevi.md
-└── README.md
 ```
 
 ## Test Senaryoları
