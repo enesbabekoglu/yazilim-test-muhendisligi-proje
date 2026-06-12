@@ -120,6 +120,7 @@ class ProductApiRegressionTest {
         assertEquals(409, response.getStatusCode());
         response.then().body("error", equalTo("Bu isimde bir ürün zaten mevcut"));
         response.then().body("name", equalTo("Laptop"));
+        response.then().time(lessThan(2000L));
     }
 
     // Test 6: POST /products - Negatif fiyat (400 Bad Request)
@@ -143,6 +144,7 @@ class ProductApiRegressionTest {
 
         assertEquals(400, response.getStatusCode());
         response.then().body("error", equalTo("Ürün fiyatı 0'dan büyük olmalıdır"));
+        response.then().time(lessThan(2000L));
     }
 
     // Test 7: DELETE /products/{id} - Ürün silme (200 OK)
@@ -175,6 +177,7 @@ class ProductApiRegressionTest {
         assertEquals(200, response.getStatusCode());
         response.then().body("message", equalTo("Ürün silindi"));
         response.then().body("id", equalTo(createdId));
+        response.then().time(lessThan(2000L));
     }
 
     // Test 8: DELETE /products/9999 - Olmayan ürünü silme (404 Not Found)
